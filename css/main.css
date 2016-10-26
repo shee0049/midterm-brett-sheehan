@@ -15,88 +15,136 @@ Font Scaling
 Colour scheme
 
 **************************************************/
-@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif';
 
-*{
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif';
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
+html {
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Droid Sans', 'more font stack stuff', sans-serif;
 }
-/*************************** 
-DEFAULTS - MOBILE FIRST 
+
+/***************************
+DEFAULTS - MOBILE FIRST
 ***************************/
-h1{
+
+h1 {
     font: bold 4.236rem 'Droid Serif', 'more font stack stuff', serif;
 }
-h2{
+h2 {
     font: bold 2.618rem 'Droid Serif', 'more font stack stuff', serif;
 }
-li, p, a{
+li,
+p,
+a {
     font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
 }
-pre, code, kbd{
-    font: normal 1.0rem 'Droid Sans Mono', 'more font stack stuff', 
+pre,
+code,
+kbd {
+    font: normal 1.0rem 'Droid Sans Mono', 'more font stack stuff',
 }
+
 /***************************
     LAYOUT - MOBILE FIRST
 ***************************/
-.wrapper{
+
+.wrapper {
     width: 95%;
     margin: 0 auto;
 }
-header{
+header {
     width: 100%;
 }
-nav{
+nav {
     width: 100%;
 }
-nav>ul{
+nav>ul {
     width: 100%;
 }
-nav li{
+nav li {
     width: 100%;
     list-style: none;
 }
 nav a,
 nav a:link,
-nav a:visited{
+nav a:visited {
     display: block;
     font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
     text-align: center;
 }
 nav a:active,
 nav a:focus,
-nav a:hover{
-    
-}
-main{
+nav a:hover {}
+main {
     width: 100%;
 }
-.col{
+.col {
     float: none;
     width: 100%;
 }
-.col img{
+.col img {
     width: 100%;
     height: auto;
     max-width: 100%;
     background-color: azure;
 }
-footer{
+footer {
     width: 100%;
 }
 
-@media screen and (min-width:600px){
-    
+/* tablet view */
+
+@media screen and (min-width:600px) {
+    /*     wrapper - 100%
+       header - 100%
+       nav - 90%
+       links - 20% of nav
+       main - 90%
+       columns - 50% of main
+       column image - 60% of column
+       footer - 90%   */
+    .wrapper {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    nav {
+        width: 90%;
+    }
+    nav li {
+        width: 20%;
+    }
+    .main {
+        width: 90%;
+    }
 }
-@media screen and (min-width: 800px){
-    
+
+/* Desktop view */
+
+@media screen and (min-width: 800px) {
+    /*header - 100%
+nav - 90%
+links - 20% of nav
+main - 90%
+columns - 50% of main
+column image - 50% of column
+footer - 100%*/
 }
-@media screen and (min-width: 1200px){
-    
+
+/* Large Desktop view */
+
+@media screen and (min-width: 1200px) {
+    /* header - 100%
+nav - 30%
+links - 100% of nav
+main - 70%
+columns - 50% of main
+column image - 55% of column width
+footer - 100%*/
 }
